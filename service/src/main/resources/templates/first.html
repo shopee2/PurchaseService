@@ -1,0 +1,141 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href= "sopcss.css">
+    <title>Shipping</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <a class="navbar-brand" href="#" style = "color:#fff;">Rew Corp Shopping</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <button type="button" class="btn-menu btn btn-primary">ขาย</button>
+      <button type="button" class="btn-menu btn btn-primary">ขายสินค้ากับเรา</button>
+      <button type="button" class="btn-menu btn btn-primary">ดาวน์โหลด</button>
+      <button type="button" class="btn-menu btn btn-primary">ติดตามเรา</button>
+      <button type="button" class="btn-menuu btn btn-primary">Profile</button>
+    </ul>
+  </div>
+</nav><br>
+
+<div class="container"><br>
+  <p style = "color:#007bff;" >ที่อยู่ในการจัดส่ง</p>
+  <p th:text="${address}"></p>
+  <br>
+</div>
+<br>
+
+<div class="container"><br>
+  <div class="col-sm-12 col-md-12 col-md-offset-1">
+<table class="table table-hover">
+<thead>
+<tr>
+<th>สินค้า</th>
+<th>จำนวน</th>
+<th class="text-center">ราคาสินค้า</th>
+<th class="text-center">รวม</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="col-sm-8 col-md-5">
+<div class="media">
+<div class="media-body">
+<h4 class="media-heading"><a href="#">กระเป๋า</a></h4>
+<h5 class="media-heading"> by <a href="#">Nai shop</a></h5>
+</div>
+</div></td>
+
+<td class="col-sm-1 col-md-1" style="text-align: center">
+<input type="email" class="form-control" id="exampleInputEmail1" value="3">
+</td>
+<td class="col-sm-1 col-md-1 text-center"><strong>10,000</strong></td>
+<td class="col-sm-1 col-md-1 text-center"><strong>30,000</strong></td>
+</tr>
+<tr>
+<td class="col-md-5">
+<div class="media">
+<div class="media-body">
+<h4 class="media-heading"><a href="#">รองเท้า</a></h4>
+<h5 class="media-heading"> by <a href="#">Non shop</a></h5>
+</div>
+</div></td>
+<td class="col-md-1" style="text-align: center">
+<input type="email" class="form-control" id="exampleInputEmail1" value="2">
+</td>
+<td class="col-md-1 text-center"><strong>42,000</strong></td>
+<td class="col-md-1 text-center"><strong>84,000</strong></td>
+</tr>
+<tr>
+<td class="col-md-5">
+<div class="media">
+<div class="media-body">
+<h4 class="media-heading"><a href="#">เสื้อ</a></h4>
+<h5 class="media-heading"> by <a href="#">Mona shop </a></h5>
+</div>
+</div></td>
+
+<td class="col-md-1" style="text-align: center">
+<input type="email" class="form-control" id="exampleInputEmail1" value="2">
+</td>
+<td class="col-md-1 text-center"><strong>10,000</strong></td>
+<td class="col-md-1 text-center"><strong>20,000</strong></td>
+</tr>					
+<tr>
+<td>   </td>
+<td>   </td>
+
+<td><h5>รวม</h5></td>
+<td class="text-right"><h3><strong>174,000</strong></h3></td>
+</tr>
+<tr>
+
+<td>   </td>
+<td>   </td>
+<td></td>
+<td>
+<button type="button" class="btn btn-success">
+สั่งสินค้า <span class="fa fa-play"></span>
+</button><br></td>
+</tr>
+</tbody>
+</table>
+<TABLE>
+            <TR>
+                    <TH> ตัวเลือกการจัดส่ง </TH>
+            </TR>
+            <TR>
+                    <TD> <select class="custom-select custom-select-lg mb-3">
+  <option value="1">ลงทะเบียนปกติ      35 บาท</option>
+  <option value="2">จัดส่งแบบEMS       50 บาท</option>
+</select> </TD>
+            </TR>
+            <TR>
+                    <TD> โค้ดส่วนลด </TD>
+            </TR>
+            <tr>โค้ดคูปองส่วนลด</tr>
+            <td><div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon1">ใช้โค้ด</button>
+  </div>
+  <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+</div></td>
+</TABLE>  
+</div>
+</div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  </body>
+</html>
