@@ -1,0 +1,19 @@
+server:
+    port: 8080
+    
+spring:
+    application:
+        name: studentservice
+    profiles:
+        active: default
+    cloud:
+        config:
+            enabled: true
+eureka:
+    instance:
+        preferIpAddress: true
+    client:
+        registerWithEureka: true
+        fatchRegistry: true
+        serviceUrl:
+            defaultZone: http://103.13.231.22:8761/
